@@ -58,4 +58,11 @@ export default {
   margin: 0%;
 }
 
+/*Responsive adaptation*/
+@media (max-width: 768px) {
+  .navBar a{
+    font-size: 5px;
+  }
+}
+
 </style>
