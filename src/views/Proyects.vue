@@ -55,4 +55,25 @@ export default{
 .imagenContainer{
     max-width: 100%;
 }
+
+/*Response adaptation*/
+@media (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textContainer {
+    top: 0;
+    max-width: 100%;
+  }
+
+  .textContainer h2 {
+    font-size: 2.2rem;
+  }
+
+  .textContainer p {
+    font-size: 1.1rem;
+  }
+}
 </style>
