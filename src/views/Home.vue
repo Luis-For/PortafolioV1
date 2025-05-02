@@ -127,16 +127,16 @@ import PhotoPerfil from '../components/PhotoPerfil.vue';
 }
 
 .hero-description{
-    color: aliceblue;
+    color: #2c3e50;
     position: relative;
     border-bottom: 2px solid gray;
-    background-color: #1B1F24;
+    background-color: #e2eff8;
     padding: 2%;
     /*background-color: ;*/
 }
 .title{
     font-family: sans-serif;
-    color: white;
+    color: #2c3e50;
     position: absolute;
     left: 3%;
     top: 3%;

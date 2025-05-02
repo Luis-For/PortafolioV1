@@ -2,8 +2,8 @@
     <div id="navBar">
       <nav>
         <router-link to="/">Home</router-link>
-        <router-link to="/Home">Proyectos</router-link>
         <router-link to="/About">About</router-link>
+        <router-link to="/Proyects">Proyectos</router-link>
       </nav>
     </div>
   </template>
@@ -20,11 +20,12 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #1B1F24;
+  background-color: #ffffff;
   padding: 15px 100px;
   z-index: 1000;
-  border-bottom:3px solid #535353;
+  border-bottom:0px solid #535353;
   box-sizing: border-box;
+  box-shadow: 0 -2px 50px rgba(0, 0, 0, 0.1)
 }
 
 #navBar nav {
@@ -41,14 +42,16 @@ export default {
 
 #navBar a {
   font-style: normal;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
 }
 
 #navBar a:hover {
-  color: #16d33f;
+  color: #ff3d69;
+  text-decoration: underline #ff3d69;
+
 }
 
 .navBar{

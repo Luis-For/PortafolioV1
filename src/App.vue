@@ -1,15 +1,11 @@
 <template>
   <div id="app">
-    <router-view></router-view> <!-- Contenido de las rutas-->
+    <!-- Contenido de las rutas-->
+    <router-view></router-view> 
   </div>
 </template>
 
 <script>
-
-
-//import { RouterView } from 'vue-router';
-//import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
 }
