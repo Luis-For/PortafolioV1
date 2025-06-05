@@ -14,67 +14,26 @@
             </section>
         <!--Cards of proyects-->
         <div class="proyectos">
-            <section>
-                <h3><strong> Proyectos realizados</strong></h3>
-                <ul class="lista">
-                    <li>
-                        <CardProyect
-                        titulo="Base de datos SQL champions box-sizing: border-box;box-sizing: border-box;box-sizing: border-box;"
-                        descripcion="no se"
-                        extra="ssss"
-                        />
-                    </li>
-                    <li>
-                        <CardProyect
-                        titulo="HOla"
-                        descripcion="no se"
-                        extra="ssss"
-                        />
-                    </li>
-                    <li>
-                        <CardProyect
-                        titulo="HOla"
-                        descripcion="no se"
-                        extra="ssss"
-                        />
-                    </li>
-                </ul>
-            </section>
+            <ProyectsComponent></ProyectsComponent>
         </div>
 
         
 
         <!-- pie de pagina-->
          <footer class="EndPage">   
-            <section>
-                <ul class="redes-sociales">
-                    <li>
-                        <a href="https://github.com/tu-usuario" target="_blank">
-                        <img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/tu-usuario" target="_blank">
-                        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:tuemail@ejemplo.com">
-                        <img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
-                        </a>
-                    </li>
-                </ul>
-            </section>
+            <FooterComponent/>
+            <FooterEnd></FooterEnd>
          </footer>
 
     </div>
 </template>
 
 <script>
-import CardProyect from '../components/CardProyect.vue';
+import FooterComponent from '../components/FooterComponent.vue';
+import FooterEnd from '../components/FooterEnd.vue';
 import NavBar from '../components/NavBar.vue';
-//import PhotoPerfil from '../components/PhotoPerfil.vue';
 import Profile from '../components/Profile.vue';
+import ProyectsComponent from '../components/ProyectsComponent.vue';
 import SkillsComponent from '../components/SkillsComponent.vue';
 
 
@@ -88,9 +47,12 @@ import SkillsComponent from '../components/SkillsComponent.vue';
         components:{
             NavBar,
   //          PhotoPerfil,
-            CardProyect,
+            //CardProyect,
             Profile,
-            SkillsComponent
+            SkillsComponent,
+            ProyectsComponent,
+            FooterComponent,
+            FooterEnd
         }
     }
 </script>
@@ -176,7 +138,8 @@ import SkillsComponent from '../components/SkillsComponent.vue';
 .EndPage{
     padding: 2%;
     color: #232B35;
-    background-color: #00000000;
+    background-color: none;
+    padding: 0%;
 }
 
 </style>
