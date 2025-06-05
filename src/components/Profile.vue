@@ -1,7 +1,7 @@
 <template>
   <div class="profile-container">
     <div class="sidebar">
-      <img class="profile-pic" src="../assets/oZmI3HE1IrxwMJIqZO2lS-transformed.png" alt="Maya Nares">
+      <img class="profile-pic" src="../assets/oZmI3HE1IrxwMJIqZO2lS-transformed.png" alt="Luis Fornaris">
       <h2 class="name">Luis Ángel<br>Fornaris Rodríguez</h2>
       <div class="divider"></div>
       <div class="social-icons">
@@ -61,6 +61,7 @@ export default{
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
+  background-color: #666;
 }
 
 .name {
