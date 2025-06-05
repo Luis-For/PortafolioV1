@@ -15,7 +15,7 @@
       <h1>Hola Mundo!</h1>
       <h2>Desarrollador full-stack</h2>
       <div class="buttons">
-        <button class="btn-primary">CURRICULUM</button>
+        <button class="btn-primary" @click="downloadCV">CURRICULUM</button>
         <button class="btn-outline">PROYECTOS</button>
       </div>
       <p>
@@ -31,7 +31,24 @@
 </template>
 <script>
 export default{
-    name:'ProfileView'
+    name:'ProfileView',
+      methods: {
+    downloadCV() {
+      const cvUrl = '../assets/docs/Luis Angel Fornaris Rodriguez - Full Stack Developer.pdf'; 
+      
+      // Crear un enlace temporal
+      const link = document.createElement('a');
+      link.href = cvUrl;
+      link.setAttribute('download', 'LuisF_Curriculum.pdf');
+      document.body.appendChild(link);
+      
+      // Simular click
+      link.click();
+      
+      // Limpiar
+      document.body.removeChild(link);
+    }
+  }
 }
 
 </script>
