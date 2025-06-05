@@ -152,5 +152,32 @@ export default{
   margin-bottom: 15px;
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .sidebar, .main-content {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .main-content h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .main-content h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .main-content p {
+    text-align: center;
+  }
+}
+
 </style>
 
