@@ -2,26 +2,22 @@
 <div class="about">
     <!--Menu de navegacion-->
     <NavBar />
-    <!--Seccion sobre mi-->
-    <section class="hero_about">
-        <h2 class="title">{{ content.title }}
-            <PhotoPerfil></PhotoPerfil>
-        </h2>
-        <p class="description" v-html="content.body"></p>
-    </section>
+    <div class="aboutMeContainer">
+        <Profile></Profile>
+    </div>
 </div>
 </template>
 
 <script>
 import aboutMeContent from '../assets/AboutMeContent';
 import NavBar from '../components/NavBar.vue';
-import PhotoPerfil from '../components/PhotoPerfil.vue';
+import Profile from '../components/Profile.vue';
 
 export default {
     name: 'AboutView',
     components: {
         NavBar,
-        PhotoPerfil
+        Profile
     },
     data() {
         return {
@@ -29,6 +25,18 @@ export default {
         }
     }
 }
+//src/assets/Blue Night Sky Cute Whale Desktop Wallpaper.png
 </script>
+<style>
+.aboutMeContainer{
+    background-image: url('../assets/Blue Night Sky Cute Whale Desktop Wallpaper.png');
+    padding-bottom: 15%;
+    justify-content: center;
+    background-position: bottom;
+}
 
-<style src="@/assets/styles/about.css"></style>
+#Profile{
+    margin-top: 10%;
+}
+
+</style>

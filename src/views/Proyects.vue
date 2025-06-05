@@ -7,28 +7,9 @@
 
     <!--presentacion-->
     <div class="heroSection">
-        <div class="textContainer">
-            <strong>
-                <h2>HOLA MUNDO!</h2>
-            </strong>
-            <p>Mis proyectos reflejan mi pasión por crear soluciones funcionales y bien pensadas</p>
-            <p>Desde aplicaciones web hasta herramientas interactivas, cada proyecto es una muestra de lo que puedo construir. ¿Listo para crear algo juntos?</p>
-        </div>
-        <!--<div class="imagenContainer">
-            <img src="../assets/oZmI3HE1IrxwMJIqZO2lS-transformed.png" alt="s">
-        </div>-->
+        <Profile/>
     </div>
 
-    <!--Cartas de proyectos-->
-    <p><code>wrapAround: true</code></p>
-    <!-- Flickity HTML init -->
-    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-    </div>
 
 </div>
 </template>
@@ -36,12 +17,14 @@
 <script>
 //import CardProyect from '../components/CardProyect.vue';
 import NavBar from '../components/NavBar.vue';
+import Profile from '../components/Profile.vue';
 
 export default {
     name: 'ProyectsView',
     components: {
         NavBar,
         //CardProyect
+        Profile
     }
 }
 </script>
@@ -56,22 +39,10 @@ body {
 }
 
 .heroSection {
-    display: flex;
-    background-color: #e2eff8;
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
-    padding-top: 5%;
-    padding-bottom: none;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    background-image: url("../assets/oZmI3HE1IrxwMJIqZO2lS-transformed.png");
-    background-size: 30%;
-    background-position: 15%;
-    background-repeat: no-repeat;
-    background-position-x: right;
-    /* Distribuye el espacio entre texto e imagen */
+    background-image: url('../assets/Blue Night Sky Cute Whale Desktop Wallpaper.png');
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 4%;
 }
 
 .textContainer {
