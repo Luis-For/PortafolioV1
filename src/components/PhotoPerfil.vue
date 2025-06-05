@@ -1,72 +1,79 @@
 <template>
-<div class="PhotoPerfil">
-    <div class="imgWrapper">
-        <img class="PhotoOfPerfil" src="../assets/oZmI3HE1IrxwMJIqZO2lS-transformed.png" alt="">
-        <!--<div class="cuadrado"></div>
-        <div class="cuadrado"></div>-->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="text">
+        <h1>HOLA MUNDO!</h1>
+        <p>
+          Soy <strong>Luis Ángel Fornaris Rodríguez</strong>, desarrollador full-stack con pasión por construir soluciones web eficientes.
+          Bienvenido a mi portafolio, donde comparto mis proyectos, habilidades y el camino que estoy construyendo en el mundo del desarrollo.
+        </p>
+      </div>
+      <div class="photo">
+        <img src="../assets/oZmI3HE1IrxwMJIqZO2lS-transformed.png" alt="Mi foto" />
+      </div>
     </div>
-</div>
+  </section>
 </template>
 
-<script>
-export default {
-    name: 'PhotoPerfil'
-}
-</script>
-
-<style>
-
-.PhotoPerfil {
-    position: relative;
-    max-width: 30%;
-    top: 10%;
-    left: 70%;
-    z-index: 5;
+<style scoped>
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* ❗ Esto hace que los hijos tengan la misma altura que el contenedor */
+  flex-wrap: wrap;
+  gap: 1rem; /* Separación lateral */
 }
 
-.imgWrapper {
-    width: 95%;
-    height: 95%;
-    /*border-radius: 50%;
-    overflow: hidden;
-    background: rgb(66, 66, 66);
-    border: 3px solid gray;*/
-    overflow: hidden;
-    position: relative;
+/* Flex layout */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* 🔧 alinea la imagen con el borde inferior */
+  flex-wrap: wrap;
 }
 
-.PhotoOfPerfil {
-    position: relative;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    bottom: 20%;
+/* Texto más grande */
+.text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
 }
 
-.cuadrado {
-    width: 100%;
-    height: 10%;
-    background: none;
-    border: 2px solid #ff0000;
-    position: absolute;
-    top: 60%;
-    right: 70%;
-    z-index: 1;
+.text h1 {
+  font-size: 3rem; /* 🔧 Aumenta el tamaño del título */
+  margin-bottom: 1rem;
 }
 
-.cuadrado::before {
-    width: 50%;
-    /* Ancho de 150 píxeles */
-    height: 1000%;
-    /* Alto de 150 píxeles */
-    background: none;
-    /* Fondo de color rojo */
-    border: 2px solid #ffffff;
-    /* Borde color negro y de 1 píxel de grosor */
-    position: absolute;
-    top: -140%;
-    right: -175%;
-    z-index: 1;
-    content: "";
+.text p {
+  font-size: 1.25rem; /* 🔧 Aumenta el tamaño del párrafo */
+  line-height: 1.6;
+}
+
+/* Imagen */
+.photo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.photo img {
+  width: 320px;
+  height: 100%; /* 👈 Forzamos que la imagen se alinee verticalmente al fondo */
+  object-fit: cover; /* 👌 Que no se deforme, solo recorte si es necesario */
+  margin: 0;
+  padding: 0;
+  align-self: flex-end; /* 👈 Baja la imagen hasta el fondo */
+}
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .photo img {
+    width: 220px;
+    margin-top: 1rem;
+  }
 }
 </style>
