@@ -65,18 +65,13 @@
 }
 
 .floating-box {
-border: solid rgb(182, 182, 182) 2px;
+  border: solid rgb(182, 182, 182) 2px;
   width: 90%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 40px auto; /* Agrega espacio vertical */
   background: rgb(243, 242, 242);
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -60px; /* hace que sobresalga hacia abajo */
 }
 </style>
