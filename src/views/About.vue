@@ -5,11 +5,16 @@
     <div class="aboutMeContainer">
         <Profile></Profile>
     </div>
+
+    <FooterComponent/>
+    <FooterEnd/>
 </div>
 </template>
 
 <script>
 import aboutMeContent from '../assets/AboutMeContent';
+import FooterComponent from '../components/FooterComponent.vue';
+import FooterEnd from '../components/FooterEnd.vue';
 import NavBar from '../components/NavBar.vue';
 import Profile from '../components/Profile.vue';
 
@@ -17,7 +22,9 @@ export default {
     name: 'AboutView',
     components: {
         NavBar,
-        Profile
+        Profile,
+        FooterComponent,
+        FooterEnd
     },
     data() {
         return {

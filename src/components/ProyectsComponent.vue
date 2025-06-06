@@ -49,11 +49,11 @@ export default {
       activeIndex: 2, // Centrar la tarjeta popular inicialmente
       plans: [
         {
-          name: "Api",
+          name: "MORPHOKEY",
           img: "https://www.svgrepo.com/show/493518/backpack.svg",
-          price: "Free",
-          features: ["Basic Support", "5 Projects", "Community Access"],
-          buttonText: "Get Started",
+          price: "MORPHOKEY es una aplicación en desarrollo orientada a la identificación taxonómica de animales ",
+          features: ["Java, Spring, Docker, PostgreSql"],
+          buttonText: "Ver proyecto",
           popular: false,
         },
         {
