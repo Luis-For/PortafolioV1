@@ -3,21 +3,40 @@
     <h2>Proyectos</h2>
     <p class="subtitle">Estos son mis proyectos que me encuentro realizando</p>
 
-    <div class="card-container">
-      <div
-        v-for="(plan, index) in plans"
-        :key="index"
-        class="card"
-        :class="{ popular: plan.popular }"
-      >
-        <img :src="plan.img" :alt="plan.name" />
-        <h3>{{ plan.name }}</h3>
-        <p class="price">{{ plan.price }}</p>
-        <ul>
-          <li v-for="(feature, fIndex) in plan.features" :key="fIndex">{{ feature }}</li>
-        </ul>
-        <button>{{ plan.buttonText }}</button>
+    <div class="carousel-container">
+      <button class="carousel-button prev" @click="prevSlide">‹</button>
+      
+      <div class="card-container" ref="carousel">
+        <div
+          v-for="(plan, index) in plans"
+          :key="index"
+          class="card"
+          :class="{ 
+            popular: plan.popular,
+            active: activeIndex === index
+          }"
+          :style="getCardStyle(index)"
+        >
+          <img :src="plan.img" :alt="plan.name" />
+          <h3>{{ plan.name }}</h3>
+          <p class="price">{{ plan.price }}</p>
+          <ul>
+            <li v-for="(feature, fIndex) in plan.features" :key="fIndex">{{ feature }}</li>
+          </ul>
+          <button>{{ plan.buttonText }}</button>
+        </div>
       </div>
+      
+      <button class="carousel-button next" @click="nextSlide">›</button>
+    </div>
+
+    <div class="carousel-dots">
+      <span 
+        v-for="(dot, index) in plans" 
+        :key="index" 
+        :class="{ active: activeIndex === index }"
+        @click="goToSlide(index)"
+      ></span>
     </div>
   </section>
 </template>
@@ -27,6 +46,7 @@ export default {
   name: "PricingSection",
   data() {
     return {
+      activeIndex: 2, // Centrar la tarjeta popular inicialmente
       plans: [
         {
           name: "Api",
@@ -71,16 +91,40 @@ export default {
       ],
     };
   },
+  methods: {
+    nextSlide() {
+      this.activeIndex = (this.activeIndex + 1) % this.plans.length;
+    },
+    prevSlide() {
+      this.activeIndex = (this.activeIndex - 1 + this.plans.length) % this.plans.length;
+    },
+    goToSlide(index) {
+      this.activeIndex = index;
+    },
+    getCardStyle(index) {
+      const offset = index - this.activeIndex;
+      const zIndex = 5 - Math.abs(offset);
+      const scale = 1 - Math.abs(offset) * 0.05;
+      const translateY = offset === 0 ? (this.plans[index].popular ? -30 : 0) : 0;
+      
+      return {
+        transform: `translateX(${offset * 80}px) translateY(${translateY}px) scale(${scale})`,
+        zIndex: zIndex,
+        opacity: offset === 0 ? 1 : 0.7 - Math.abs(offset) * 0.2
+      };
+    }
+  }
 };
 </script>
 
 <style scoped>
-/* Aquí puedes agregar estilos similares a los originales */
 .pricing-section {
   background: #0c2d48;
   padding: 60px 20px;
   text-align: center;
   color: white;
+  overflow: hidden;
+  position: relative;
 }
 
 .pricing-section h2 {
@@ -94,60 +138,44 @@ export default {
   color: #cfd9e0;
 }
 
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 60px auto;
+  max-width: 1200px;
+}
+
 .card-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 0;
+  height: 500px;
   position: relative;
-  margin-top: 60px;
+  width: 80%;
+  margin: 0 auto;
 }
 
-/* Igualar tamaño de todas las tarjetas */
 .card {
-  position: relative;
+  position: absolute;
   background: white;
   color: #333;
   border-radius: 16px;
-  width: 260px;           /* tamaño uniforme */
-  height: 460px;          /* altura fija */
+  width: 260px;
+  height: 460px;
   padding: 25px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, z-index 0.3s ease;
-  margin: 0 -40px;
+  transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* Control de capas para superposición */
-.card-container .card:nth-child(1),
-.card-container .card:nth-child(5) {
-  z-index: 1;
-}
-
-.card-container .card:nth-child(2),
-.card-container .card:nth-child(4) {
-  z-index: 2;
-}
-
-.card-container .card:nth-child(3) {
-  z-index: 3;
-}
-
-/* Hover solo para tarjetas normales */
-.card:not(.popular):hover {
-  transform: translateY(-10px) scale(1.03);
-  z-index: 4;
-}
-
-/* Tarjeta destacada */
 .card.popular {
-  transform: translateY(-30px) scale(1.05);
   border: 2px solid #0078d7;
 }
 
-/* Imagen, título, precio, lista, botón */
 .card img {
   width: 64px;
   margin-bottom: 15px;
@@ -187,7 +215,61 @@ export default {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  transition: background 0.3s;
 }
 
+.card button:hover {
+  background: #005fa3;
+}
 
+.carousel-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+.carousel-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.carousel-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.carousel-dots span.active {
+  background: #0078d7;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    width: 220px;
+    height: 420px;
+    padding: 15px;
+  }
+  
+  .card-container {
+    height: 450px;
+  }
+}
 </style>

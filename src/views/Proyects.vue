@@ -9,13 +9,16 @@
     <div class="heroSection">
         <Profile/>
     </div>
-
+    <FooterComponent/>
+    <FooterEnd/>
 
 </div>
 </template>
 
 <script>
 //import CardProyect from '../components/CardProyect.vue';
+import FooterComponent from '../components/FooterComponent.vue';
+import FooterEnd from '../components/FooterEnd.vue';    
 import NavBar from '../components/NavBar.vue';
 import Profile from '../components/Profile.vue';
 
@@ -24,7 +27,9 @@ export default {
     components: {
         NavBar,
         //CardProyect
-        Profile
+        Profile,
+        FooterComponent,
+        FooterEnd
     }
 }
 </script>
