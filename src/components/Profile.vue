@@ -24,7 +24,7 @@
             en el mundo del desarrollo.
         </p>
         <p>
-            Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.
+            Si estás buscando a alguien comprometido, adaptable y con pasión por la tecnología, estoy listo para ayudarte a construir tu próxima solución digital.
         </p>
     </div>
 </div>
@@ -105,6 +105,7 @@ export default {
 .main-content p {
     transform: translateX(0px);
     opacity: 1;
+    color: #FFFF;
 }
 
 .social-icons {

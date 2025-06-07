@@ -42,6 +42,11 @@
 </template>
 
 <script>
+import morphokeyLogo from '@/assets/images/morphokeyLogo.webp';
+import futbol from '@/assets/images/futbol.webp';
+import microserviciosLogo from '@/assets/images/microserviciosLogo.webp';
+import cloud_signal_database_server from '@/assets/images/cloud_signal_database_server.svg';
+import browser from '@/assets/images/browser.svg';
 export default {
   name: "PricingSection",
   data() {
@@ -50,42 +55,43 @@ export default {
       plans: [
         {
           name: "MORPHOKEY",
-          img: "https://www.svgrepo.com/show/493518/backpack.svg",
+          //img: "@/assets/images/morphokeyLogo.webp",
+          img: morphokeyLogo,
           price: "MORPHOKEY es una aplicación en desarrollo orientada a la identificación taxonómica de animales ",
           features: ["Java, Spring, Docker, PostgreSql"],
           buttonText: "Ver proyecto",
           popular: false,
         },
         {
-          name: "Basic",
-          img: "https://github.com/JosCariDe/spring-microservices",
-          price: "$9 / month",
-          features: ["Priority Support", "15 Projects", "Team Access"],
-          buttonText: "Subscribe",
+          name: "Aplicacion web de equipos de futbol",
+          img: futbol,
+          price: "Es una aplicacion la cual almacena informacion de equipos de futbol, partidos y jugadores ",
+          features: ["Java", "Spring", "PostgreSql", "Docker"],
+          buttonText: "Ver proyecto",
           popular: false,
         },
         {
           name: "API de microservicios",
-          img: "https://www.svgrepo.com/show/493527/travel-bag.svg",
-          price: "$Description",
-          features: ["24/7 Support", "Unlimited Projects", "Analytics Dashboard"],
-          buttonText: "Join Now",
+          img: microserviciosLogo,
+          price: "Aplicaciones usando microservicios, patrones de diseño y observabilidad",
+          features: ["Java", "Spring", "PostgreSql", "Docker"],
+          buttonText: "Ver proyecto",
           popular: true,
         },
         {
-          name: "Team",
-          img: "https://www.svgrepo.com/show/493520/military-bag.svg",
-          price: "$39 / month",
-          features: ["Team Collaboration", "Custom Workflows", "API Access"],
+          name: "Diseño de base de datos Champions League 2022",
+          img: cloud_signal_database_server,
+          price: "Diseño, construcción y modelado de una base de datos relacional",
+          features: ["PostgreSql", "Docker"],
           buttonText: "Get Access",
           popular: false,
         },
         {
-          name: "Enterprise",
-          img: "https://www.svgrepo.com/show/493516/suitcase.svg",
-          price: "Custom",
-          features: ["Dedicated Manager", "SLAs & Contracts", "Onboarding Help"],
-          buttonText: "Contact Us",
+          name: "Portafolio Codigo",
+          img: browser,
+          price: "Encuentra aqui el codigo de mi portafolio",
+          features: ["Node.js", "Vue.js", "JavScript"],
+          buttonText: "Ver proyecto",
           popular: false,
         },
       ],

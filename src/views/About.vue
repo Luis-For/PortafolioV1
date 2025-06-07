@@ -5,7 +5,8 @@
     <div class="aboutMeContainer">
         <Profile></Profile>
     </div>
-
+    <!--Sobre mi-->
+    <AboutComponent></AboutComponent>
     <FooterComponent/>
     <FooterEnd/>
 </div>
@@ -13,6 +14,7 @@
 
 <script>
 import aboutMeContent from '../assets/AboutMeContent';
+import AboutComponent from '../components/AboutComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 import FooterEnd from '../components/FooterEnd.vue';
 import NavBar from '../components/NavBar.vue';
@@ -23,6 +25,7 @@ export default {
     components: {
         NavBar,
         Profile,
+        AboutComponent,
         FooterComponent,
         FooterEnd
     },
@@ -37,9 +40,11 @@ export default {
 <style>
 .aboutMeContainer{
     background-image: url('../assets/Blue Night Sky Cute Whale Desktop Wallpaper.png');
-    padding-bottom: 15%;
+    /*padding-bottom: 15%;*/
     justify-content: center;
     background-position: bottom;
+    padding-top: 5%;
+    padding-bottom: 4%;
 }
 
 #Profile{

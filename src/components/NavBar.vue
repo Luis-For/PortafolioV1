@@ -76,8 +76,8 @@ nav a {
 }
 
 nav a:hover {
-  color: #ff3d69;
-  text-decoration: underline #ff3d69;
+  color: #ffffff;
+  text-decoration: underline #ffffff;
 }
 
 /* Botón hamburguesa */
@@ -103,7 +103,7 @@ nav a:hover {
     position: absolute;
     top: 60px;
     right: 5%;
-    background-color: #a1887f;
+    background-color: #275E82;
     border: 1px solid #ddd;
     flex-direction: column;
     padding: 15px;

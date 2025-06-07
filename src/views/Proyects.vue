@@ -52,7 +52,7 @@ body {
 .heroSection {
     background-image: url('../assets/Blue Night Sky Cute Whale Desktop Wallpaper.png');
     justify-content: center;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-bottom: 4%;
     background-position: bottom;
 }
