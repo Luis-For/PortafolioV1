@@ -9,6 +9,11 @@
     <div class="heroSection">
         <Profile/>
     </div>
+
+    <div class="seccionProyects">
+        
+    </div>
+    <CardsComponent></CardsComponent>
     <FooterComponent/>
     <FooterEnd/>
 
@@ -16,7 +21,7 @@
 </template>
 
 <script>
-//import CardProyect from '../components/CardProyect.vue';
+import CardsComponent from '../components/CardsComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 import FooterEnd from '../components/FooterEnd.vue';    
 import NavBar from '../components/NavBar.vue';
@@ -27,6 +32,7 @@ export default {
     components: {
         NavBar,
         //CardProyect
+        CardsComponent,
         Profile,
         FooterComponent,
         FooterEnd
@@ -48,6 +54,7 @@ body {
     justify-content: center;
     padding-top: 10%;
     padding-bottom: 4%;
+    background-position: bottom;
 }
 
 .textContainer {

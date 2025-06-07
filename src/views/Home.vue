@@ -8,7 +8,6 @@
         <section class="hero-description" aria-label="Presentación de Luis Ángel Fornaris">
             <Profile></Profile>
         </section>
-
         <section class="Skills">
             <SkillsComponent></SkillsComponent>
             </section>
@@ -16,15 +15,11 @@
         <div class="proyectos">
             <ProyectsComponent></ProyectsComponent>
         </div>
-
-        
-
         <!-- pie de pagina-->
+         <FooterComponent/>
          <footer class="EndPage">   
-            <FooterComponent/>
             <FooterEnd></FooterEnd>
          </footer>
-
     </div>
 </template>
 
