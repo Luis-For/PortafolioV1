@@ -27,17 +27,17 @@ export default {
         },
         {
           title: "Api de microservicios",
-          description: "E-commerce completo con carrito de compras y pasarela de pagos",
+          description: "Aplicacion en microservicios con distintos patrones de diseño",
           url: "https://ejemplo.com/tienda"
         },
         {
           title: "Aplicación de futbol",
-          description: "App de productividad para iOS y Android con sincronización en la nube",
+          description: "App de futbol con backend y frontend",
           url: "https://ejemplo.com/app"
         },
         {
           title: "MorphoKey",
-          description: "App de productividad para iOS y Android con sincronización en la nube",
+          description: "aplicación en desarrollo orientada a la identificación taxonómica de animales mediante la implementación de claves taxonómicas sistemáticas.",
           url: "https://ejemplo.com/app"
         },
         {
