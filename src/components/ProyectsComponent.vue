@@ -1,7 +1,7 @@
 <template>
   <section class="pricing-section">
     <h2>Proyectos</h2>
-    <p class="subtitle">Estos son mis proyectos que me encuentro realizando</p>
+    <p class="subtitle">Estos son mis proyectos en los que me encuentro trabajando</p>
 
     <div class="carousel-container">
       <button class="carousel-button prev" @click="prevSlide">‹</button>
@@ -23,7 +23,7 @@
           <ul>
             <li v-for="(feature, fIndex) in plan.features" :key="fIndex">{{ feature }}</li>
           </ul>
-          <button>{{ plan.buttonText }}</button>
+          <button @click="openProject(plan.url)">{{ plan.buttonText }}</button>
         </div>
       </div>
       
@@ -55,12 +55,12 @@ export default {
       plans: [
         {
           name: "MORPHOKEY",
-          //img: "@/assets/images/morphokeyLogo.webp",
           img: morphokeyLogo,
           price: "MORPHOKEY es una aplicación en desarrollo orientada a la identificación taxonómica de animales ",
           features: ["Java, Spring, Docker, PostgreSql"],
           buttonText: "Ver proyecto",
           popular: false,
+          url: "https://github.com/Luis-For/MorphoKey-ui-backend"
         },
         {
           name: "Aplicacion web de equipos de futbol",
@@ -69,6 +69,7 @@ export default {
           features: ["Java", "Spring", "PostgreSql", "Docker"],
           buttonText: "Ver proyecto",
           popular: false,
+          url: "https://github.com/Luis-For/Api-futbol"
         },
         {
           name: "API de microservicios",
@@ -77,6 +78,7 @@ export default {
           features: ["Java", "Spring", "PostgreSql", "Docker"],
           buttonText: "Ver proyecto",
           popular: true,
+          url: "https://github.com/JosCariDe/spring-microservices"
         },
         {
           name: "Diseño de base de datos Champions League 2022",
@@ -85,6 +87,7 @@ export default {
           features: ["PostgreSql", "Docker"],
           buttonText: "Get Access",
           popular: false,
+          url: "https://github.com/Luis-For/UEFA-Champions-League-SQL"
         },
         {
           name: "Portafolio Codigo",
@@ -93,6 +96,7 @@ export default {
           features: ["Node.js", "Vue.js", "JavScript"],
           buttonText: "Ver proyecto",
           popular: false,
+          url: "https://github.com/Luis-For/PortafolioV1"
         },
       ],
     };
@@ -118,6 +122,11 @@ export default {
         zIndex: zIndex,
         opacity: offset === 0 ? 1 : 0.7 - Math.abs(offset) * 0.2
       };
+    },
+    openProject(url) {
+      if (url) {
+        window.open(url, '_blank');
+      }
     }
   }
 };

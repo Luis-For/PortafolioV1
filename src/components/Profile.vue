@@ -16,7 +16,7 @@
         <h2>Desarrollador full-stack</h2>
         <div class="buttons">
             <button class="btn-primary" @click="downloadCV">CURRICULUM</button>
-            <button class="btn-outline">PROYECTOS</button>
+            <button class="btn-outline" @click="goToProyectsGit">PROYECTOS</button>
         </div>
         <p>
             desarrollador full-stack con pasión por construir soluciones web eficientes.
@@ -48,9 +48,17 @@ export default {
 
             // Limpiar
             document.body.removeChild(link);
+        },
+
+        goToProyectsGit(){
+            const gitUrl='https://github.com/Luis-For';
+             //window.location.href=gitUrl;
+             window.open(gitUrl, 'new tab')
         }
     }
+    
 }
+
 </script>
 
 <style scoped>

@@ -39,7 +39,7 @@ export default {
 </script>
 <style>
 .aboutMeContainer{
-    background-image: url('../assets/Blue Night Sky Cute Whale Desktop Wallpaper.png');
+    background-image: url('../assets/images/fondo_bule.webp');
     /*padding-bottom: 15%;*/
     justify-content: center;
     background-position: bottom;

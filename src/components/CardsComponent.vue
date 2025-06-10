@@ -23,30 +23,30 @@ export default {
         {
           title: "Portafolio Web",
           description: "Sitio web personal mostrando mis proyectos recientes",
-          url: "https://ejemplo.com/portafolio"
+          url: "https://github.com/Luis-For/PortafolioV1"
         },
         {
           title: "Api de microservicios",
-          description: "E-commerce completo con carrito de compras y pasarela de pagos",
-          url: "https://ejemplo.com/tienda"
+          description: "Aplicación realizada en java y spring con microservicios",
+          url: "https://github.com/JosCariDe/spring-microservices"
         },
         {
           title: "Aplicación de futbol",
           description: "App de productividad para iOS y Android con sincronización en la nube",
-          url: "https://ejemplo.com/app"
+          url: "https://github.com/Luis-For/Api-futbol"
         },
         {
           title: "MorphoKey",
-          description: "App de productividad para iOS y Android con sincronización en la nube",
-          url: "https://ejemplo.com/app"
+          description: "App de clasificación de animales por medio de claves taxonomicas",
+          url: "https://github.com/Luis-For/MorphoKey-ui-backend"
         },
         {
           title: "Base de datos SQL",
           description: "App de productividad para iOS y Android con sincronización en la nube",
-          url: "https://ejemplo.com/app"
+          url: "https://github.com/Luis-For/UEFA-Champions-League-SQL"
         },
         {
-          title: "Aplicación Móvil",
+          title: "Base de datos ",
           description: "App de productividad para iOS y Android con sincronización en la nube",
           url: "https://ejemplo.com/app"
         }

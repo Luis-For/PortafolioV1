@@ -31,7 +31,6 @@ export default {
     name: 'ProyectsView',
     components: {
         NavBar,
-        //CardProyect
         CardsComponent,
         Profile,
         FooterComponent,
@@ -44,13 +43,13 @@ export default {
 
 body {
     margin: 0;
-    /* Elimina los márgenes predeterminados del body */
+    /* Eliminamoslos márgenes predeterminados del body */
     padding: 0;
-    /* Elimina el padding predeterminado del body */
+    /* Eliminamos el padding predeterminado del body */
 }
 
 .heroSection {
-    background-image: url('../assets/Blue Night Sky Cute Whale Desktop Wallpaper.png');
+    background-image: url('../assets/images/fondo_bule.webp');
     justify-content: center;
     padding-top: 5%;
     padding-bottom: 4%;
