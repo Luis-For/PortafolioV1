@@ -1,133 +1,39 @@
 <template>
-<div class="container">
-    <!--Cabecera-->
-    <div class="navBar">
-        <NavBar></NavBar>
+  <div id="app">
+    <AnimatedBackground />
+    <!-- Tu contenido aquí -->
+    <div class="content">
+      <h1>Mi Página con Fondo Animado</h1>
+      <p>Este es un ejemplo de fondo animado con Vue.js</p>
     </div>
-
-    <!--presentacion-->
-    <div class="heroSection">
-        <Profile/>
-    </div>
-
-    <div class="seccionProyects">
-        
-    </div>
-    <CardsComponent></CardsComponent>
-    <FooterComponent/>
-    <FooterEnd/>
-
-</div>
+  </div>
 </template>
 
 <script>
-import CardsComponent from '../components/CardsComponent.vue';
-import FooterComponent from '../components/FooterComponent.vue';
-import FooterEnd from '../components/FooterEnd.vue';    
-import NavBar from '../components/NavBar.vue';
-import Profile from '../components/Profile.vue';
+import AnimatedBackground from './components/AnimatedBackground.vue'
 
 export default {
-    name: 'ProyectsView',
-    components: {
-        NavBar,
-        CardsComponent,
-        Profile,
-        FooterComponent,
-        FooterEnd
-    }
+  name: 'App',
+  components: {
+    AnimatedBackground
+  }
 }
 </script>
 
 <style>
-
-body {
-    margin: 0;
-    /* Eliminamoslos márgenes predeterminados del body */
-    padding: 0;
-    /* Eliminamos el padding predeterminado del body */
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: white;
 }
 
-.heroSection {
-    background-image: url('../assets/images/fondo_bule.webp');
-    justify-content: center;
-    padding-top: 5%;
-    padding-bottom: 4%;
-    background-position: bottom;
-}
-
-.textContainer {
-    top: 30%;
-    max-width: 50%;
-    position: relative;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.textContainer h2 {
-    font-size: 4rem;
-    font-family: sans-serif;
-    text-align: justify;
-
-}
-
-.textContainer p {
-    font-size: 1.5rem;
-    text-align: justify;
-}
-
-.imagenContainer {
-    width: 30%;
-    /* Define el ancho del contenedor de la imagen */
-    height: auto;
-    /* La altura se ajustará según la proporción de la imagen */
-    overflow: hidden;
-    /* Oculta cualquier parte de la imagen que se salga */
-    margin-bottom: -0.4%;
-    background-image: url("../assets/oZmI3HE1IrxwMJIqZO2lS-transformed.png");
-}
-
-.imagenContainer img {
-    width: 80%;
-    top: 0%;
-    right: 10%;
-    position: relative;
-    object-fit: scale-down;
-    background-image: url("../assets/oZmI3HE1IrxwMJIqZO2lS-transformed.png");
-}
-
-.listOfProyectsBackend {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
-    padding: 2%;
-}
-
-/*Response adaptation 1751*/
-
-@media (max-width: 769) {
-    .contentWrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .textContainer {
-        top: 0;
-        max-width: 100%;
-    }
-
-    .textContainer h2 {
-        font-size: 1.8rem;
-    }
-
-    .textContainer p {
-        font-size: 1rem;
-    }
-
-    .heroSection {
-        color: blueviolet;
-    }
-
+.content {
+  position: relative;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor legibilidad */
+  border-radius: 10px;
+  margin-top: 2rem;
 }
 </style>

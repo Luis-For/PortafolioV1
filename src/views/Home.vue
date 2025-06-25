@@ -16,12 +16,15 @@
     <!--Cards of proyects-->
     <div class="proyectos">
         <ProyectsComponent></ProyectsComponent>
+        
     </div>
     <!-- pie de pagina-->
     <FooterComponent />
     <footer class="EndPage">
         <FooterEnd></FooterEnd>
     </footer>
+
+    
 </div>
 </template>
 
@@ -32,6 +35,7 @@ import NavBar from '../components/NavBar.vue';
 import Profile from '../components/Profile.vue';
 import ProyectsComponent from '../components/ProyectsComponent.vue';
 import SkillsComponent from '../components/SkillsComponent.vue';
+//import SliderComponent from '../components/SliderComponent.vue';
 
 export default {
     name: 'HomeView',
@@ -49,6 +53,7 @@ export default {
         ProyectsComponent,
         FooterComponent,
         FooterEnd
+        //SliderComponent
     }
 }
 </script>
